@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "swarm-js": "^0.1.42",
+    "web3": "^4.4.0"
+  }
+}

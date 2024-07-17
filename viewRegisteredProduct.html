@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fake Product Identification</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .dcontainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .qr-code {
+            flex: 1;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="ftco-section">
+        <div class="container-fluid px-md-5">
+            <div class="row justify-content-between">
+                <div class="col-md-8 order-md-last">
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <a class="navbar-brand" href="index.html">Fake Product Identification <span>through
+                                    Blockchain</span></a>
+                        </div>
+                        <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+                            <form action="#" class="searchform order-lg-last">
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="social-media">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                    aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars"></span> Menu
+                </button>
+                <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item "><a href="manufacturer.html" class="nav-link">Manufacturer</a></li>
+                        <li class="nav-item"><a href="consumer.html" class="nav-link">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END nav -->
+
+    </section>
+
+    <div class="container">
+        <h2>View Registered Product</h2>
+
+        <div class="matrix">
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="verifyManufacturerId">Manufacturer ID</label>
+                    <input class="form-control" id="verifyManufacturerId" name="verifyManufacturerId" type="text" />
+                </div>
+
+                <div class="form-group">
+                    <label for="verifyProductName">Product Name</label>
+                    <input class="form-control" id="verifyProductName" name="verifyProductName" type="text" />
+                </div>
+
+                <div class="form-group">
+                    <label for="verifyProductSerialNumber">Product SN:</label>
+                    <input class="form-control" id="verifyProductSerialNumber" name="verifyProductSerialNumber"
+                        type="text" />
+                </div>
+
+                <div class="form-group">
+                    <label for="verifyProductBrand">Product Brand</label>
+                    <input class="form-control" id="verifyProductBrand" name="verifyProductBrand" type="text" />
+                </div>
+                <button type="button" class="btn btn-warning btn-register" id="register" onclick="verifyData()">View
+                    Product</button>
+                <br>
+                <div class=form-group id="verificationResult"></div>
+            </form>
+
+        </div>
+
+
+        <div class="dcontainer">
+            <div class=form-group form-control id="lol" style="display: none">
+
+                <p id="M_Id">With Manufacturer ID: </p>
+                <p id="P_Name">Product Name: </p>
+                <p id="P_SN">Product Serial Number: </p>
+                <p id="P_Brand">Product Brand: </p>
+            </div>
+            <div class="qr-code" id="consumer-qr">
+                <div align="center">
+                    <img align="center" hidden id="imgQR" src="" alt="qr-code">
+                </div>
+                <br></br>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.4/dist/web3.min.js"></script>
+    <script src="addproduct.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.0.0/jsQR.js"></script>
+</body>
+
+</html>
