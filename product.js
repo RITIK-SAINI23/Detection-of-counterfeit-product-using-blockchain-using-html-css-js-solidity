@@ -1,4 +1,3 @@
-
 const contractAddress = '0x27a31a8f60ec25c4cfdfb72738c108c81f5e7b55';
 const contractABI = [
 	{
